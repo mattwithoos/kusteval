@@ -36,3 +36,9 @@ Envs are set to be Github Actions friendly
 
 ### Run a sample FAIL test
 `docker run -it -v "$(pwd)"/tests:/tests -e INPUT_KUSTOMIZE_VER='4.5.7' -e INPUT_TARGET_DIR=/tests/overlays/fail-test $(docker build -q .)`
+
+## TODO
+Please feel welcome to open a PR for anything - with a priority on:
+
+* I could use some help "testing" a failure and having it return successful if it fails (see my workflow)
+* General review for best practice
