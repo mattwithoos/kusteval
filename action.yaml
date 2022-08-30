@@ -1,5 +1,7 @@
 # action.yaml
 name: "kusteval"
+icon: "check-circle"
+color: "blue"
 description: "Validates the generated result of Kustomize resources without having to store Kustomize outputs in Git"
 inputs:
   kustomize_ver:
