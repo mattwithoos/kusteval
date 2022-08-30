@@ -5,4 +5,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Kusteval PASS test
-    - uses: mattwithoos/kusteval@master
+    - uses: actions/checkout@master
+      uses: mattwithoos/kusteval@master
