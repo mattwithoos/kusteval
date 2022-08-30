@@ -7,6 +7,8 @@ Allows for the evaluation of kustomize files "in-memory", so that you don't have
 `docker run {image}`
 
 ### Github Action
+Note you should probably target a specific release rather than using `mattwithoos/kusteval@main`
+
 ```yaml
 on: push
 name: mattwithoos/kusteval K8s validation
@@ -17,6 +19,9 @@ jobs:
     - uses: actions/checkout@master
     - name: Kusteval PASS test
       uses: mattwithoos/kusteval@main
+      with:
+        kustomize_ver: '4.5.7'
+        target_dir: './tests/overlays/pass-test'
 ```
 
 ## Inputs

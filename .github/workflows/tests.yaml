@@ -7,3 +7,15 @@ jobs:
     - uses: actions/checkout@master
     - name: Kusteval PASS test
       uses: mattwithoos/kusteval@main
+      with:
+        kustomize_ver: '4.5.7'
+        target_dir: './tests/overlays/pass-test'
+  kusteval-fail:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: Kusteval FAIL test
+      uses: mattwithoos/kusteval@main
+      with:
+        kustomize_ver: '4.5.7'
+        target_dir: './tests/overlays/fail-test'

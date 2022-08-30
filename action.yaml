@@ -11,7 +11,7 @@ inputs:
     default: '4.5.7'
   target_dir:
     description: 'relative path to kustomize resource directory, eg ./k8s/overlays/prod'
-    required: false
+    required: true
     default: '.'
 outputs:
   build_output:
