@@ -3,9 +3,10 @@ kind: Deployment
 metadata:
   name: some-microservice
 spec:
-  selector:
-      name: some-microservice
   template:
+    metadata:
+      labels:
+        name: some-microservice
     spec:
       containers:
         - name: nginx
