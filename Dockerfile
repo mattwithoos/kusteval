@@ -4,7 +4,6 @@ RUN apk update \
     && apk upgrade \
     && apk --no-cache add curl bash
 
-COPY build build
 COPY ./entrypoint.sh /usr/local/bin/entrypoint.sh
 RUN chmod +x /usr/local/bin/entrypoint.sh
 

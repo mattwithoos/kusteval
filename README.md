@@ -14,8 +14,9 @@ jobs:
   kusteval-pass:
     runs-on: ubuntu-latest
     steps:
+    - uses: actions/checkout@master
     - name: Kusteval PASS test
-    - uses: mattwithoos/kusteval@master
+      uses: mattwithoos/kusteval@main
 ```
 
 ## Inputs
