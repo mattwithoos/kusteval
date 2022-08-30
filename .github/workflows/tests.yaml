@@ -19,3 +19,7 @@ jobs:
       with:
         kustomize_ver: '4.5.7'
         target_dir: './tests/overlays/fail-test'
+      if: ${{ failure() }}
+      run: return 0
+      if: ${{ success() }}
+      run: return 1
