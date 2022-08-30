@@ -13,7 +13,7 @@ data:
             charset utf-8;
 
             location / {
-                return 200;v
+                return 200;
             }
         }
     }
