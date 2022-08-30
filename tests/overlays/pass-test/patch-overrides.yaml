@@ -4,7 +4,7 @@ metadata:
   name: some-microservice
 spec:
   template:
-    metadata:
+    spec:
       containers:
         - name: nginx
           ports:
