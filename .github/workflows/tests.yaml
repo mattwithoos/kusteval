@@ -1,0 +1,9 @@
+on: push
+name: mattwithoos/kusteval K8s validation
+jobs:
+  kubeval:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: test
+      uses: instrumenta/kubeval-action@master
