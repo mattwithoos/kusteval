@@ -4,6 +4,6 @@ jobs:
   kusteval-pass:
     runs-on: ubuntu-latest
     steps:
-    - name: Kusteval PASS test
     - uses: actions/checkout@master
+    - name: Kusteval PASS test
       uses: mattwithoos/kusteval@master
