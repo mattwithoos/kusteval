@@ -1,0 +1,8 @@
+namespace: fail
+commonLabels:
+  env: fail
+bases:
+  - ../../base
+
+patchesStrategicMerge:
+ - patch-overrides.yaml

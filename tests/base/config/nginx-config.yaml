@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: some-microservice-nginx
+data:
+  nginx.conf: |
+    http {
+        server {
+            listen 80 default_server;
+
+            root /var/www/public;
+            index index.html;
+            charset utf-8;
+
+            location / {
+                return 200;v
+            }
+        }
+    }

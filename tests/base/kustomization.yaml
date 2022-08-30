@@ -1,0 +1,3 @@
+resources:
+- config/nginx-config.yaml
+- deployment.yaml

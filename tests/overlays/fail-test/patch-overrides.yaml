@@ -1,0 +1,11 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: some-microservice
+spec:
+  template:
+    metadata:
+      containers:
+        - name: this-doesnt-exist
+          ports:
+            - containerPort: 90

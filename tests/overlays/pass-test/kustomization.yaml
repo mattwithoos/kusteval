@@ -1,0 +1,8 @@
+namespace: pass
+commonLabels:
+  env: pass
+bases:
+  - ../../base
+
+patchesStrategicMerge:
+ - patch-overrides.yaml

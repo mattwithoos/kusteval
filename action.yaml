@@ -1,0 +1,18 @@
+# action.yaml
+name: "kusteval"
+description: "Validates the generated result of Kustomize resources without having to store Kustomize outputs in Git"
+inputs:
+  kustomize_ver:
+    description: 'kustomize version'
+    required: true
+    default: '4.5.7'
+  target_dir:
+    description: 'relative path to kustomize resource directory, eg ./k8s/overlays/prod'
+    required: false
+    default: '.'
+outputs:
+  build_output:
+    description: 'Output of kustomize build'
+runs:
+  using: "docker"
+  image: "Dockerfile"

@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: some-microservice
+spec:
+  selector:
+      name: some-microservice
+  template:
+    metadata:
+      containers:
+        - name: nginx
+          image: nginx:1.19.2-alpine
+          ports:
+            - containerPort: 80
+          volumeMounts:
+            - mountPath: /etc/nginx/nginx.conf
+              readOnly: true
+              subPath: nginx.conf
+              name: nginx-conf
+      volumes:
+        - name: nginx-conf
+          configMap:
+            name: some-microservice-nginx
+            items:
+              - key: nginx.conf
+                path: nginx.conf
